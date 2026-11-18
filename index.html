@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#07100c"><meta name="description" content="Trick Six — a six-seat team trick-taking card table.">
+<link rel="manifest" href="/manifest.json"><link rel="stylesheet" href="/styles.css"><title>TRICK SIX · Private Card Room</title>
+</head>
+<body>
+<div id="app" class="app-shell">
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">Ⅵ</span><span>TRICK <b>SIX</b><small>PRIVATE CARD ROOM</small></span></div>
+    <div class="room-tools"><span class="room-label">ROOM</span><strong id="room-code">LOCAL</strong><button id="copy-room" class="quiet-btn">Copy invite</button></div>
+    <div class="contract-chip" id="contract-chip">BID — · COLOR HIDDEN</div>
+    <div class="scoreboard"><span class="team-a">TEAM A <b id="score-a">0</b></span><i></i><span class="team-b">TEAM B <b id="score-b">0</b></span></div>
+    <button id="mute-btn" class="icon-btn" aria-label="Mute audio">♫</button>
+  </header>
+  <main class="arena-wrap">
+    <div class="arena-glow"></div>
+    <section class="table" aria-label="Card table">
+      <div class="table-grain"></div><div class="gold-ring"></div>
+      <div id="seat-0" class="seat seat-0"></div><div id="seat-1" class="seat seat-1"></div>
+      <div id="seat-2" class="seat seat-2"></div><div id="seat-3" class="seat seat-3"></div>
+      <div id="seat-4" class="seat seat-4"></div><div id="seat-5" class="seat seat-5"></div>
+      <div class="center-stage">
+        <div id="phase-pill" class="phase-pill">WAITING FOR PLAYERS</div>
+        <div id="draw-display" class="draw-display"></div>
+        <div id="trick-cards" class="trick-cards"></div>
+        <div id="action-panel" class="action-panel"></div>
+        <div id="notice" class="notice" aria-live="polite">Create a room or fill the table with bots.</div>
+      </div>
+    </section>
+  </main>
+  <footer class="hand-dock">
+    <div class="hand-meta"><span>YOUR HAND</span><span id="hand-count">0 CARDS</span><span id="turn-hint">Waiting for deal</span></div>
+    <div id="hand" class="hand" aria-label="Your cards"></div>
+  </footer>
+</div>
+<div id="overlay" class="overlay hidden"><div class="modal" id="modal-content"></div></div>
+<script type="module" src="/src/client.js"></script>
+</body></html>
